@@ -15,6 +15,7 @@ PasswordView
         app:mode="rect"
         app:passwordSize="40dp"/>
 ```
+ 详细请下载[Demo](https://codeload.github.com/EoniJJ/PasswordView/zip/master)查看
 ## Attribute
 + passwordLength (密码长度)
 + mode (样式切换 underline->下划线  rect->边框)
