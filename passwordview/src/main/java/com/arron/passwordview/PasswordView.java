@@ -409,18 +409,22 @@ public class PasswordView extends View {
 
     public void setPasswordSize(int passwordSize) {
         this.passwordSize = passwordSize;
+        postInvalidate();
     }
 
     public void setPasswordLength(int passwordLength) {
         this.passwordLength = passwordLength;
+        postInvalidate();
     }
 
     public void setCursorColor(int cursorColor) {
         this.cursorColor = cursorColor;
+        postInvalidate();
     }
 
     public void setCursorEnable(boolean cursorEnable) {
         isCursorEnable = cursorEnable;
+        postInvalidate();
     }
 
     /**
