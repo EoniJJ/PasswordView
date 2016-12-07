@@ -17,6 +17,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        app:mode="rect"
+        app:cipherEnable="false"
         app:passwordSize="40dp"/>
 </RelativeLayout>

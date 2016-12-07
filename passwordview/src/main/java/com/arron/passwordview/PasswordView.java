@@ -40,6 +40,7 @@ public class PasswordView extends View {
     private boolean isCursorEnable;//是否开启光标
     private boolean isInputComplete;//是否输入完毕
     private int cipherTextSize;//密文符号大小
+    private boolean cipherEnable;//是否开启密文
     private static String CIPHER_TEXT = "*"; //密文符号
     private boolean isLoop;//控制循环
     private String[] password;//密码数组
@@ -104,13 +105,14 @@ public class PasswordView extends View {
             borderColor = typedArray.getColor(R.styleable.PasswordView_borderColor, Color.BLACK);
             cursorColor = typedArray.getColor(R.styleable.PasswordView_cursorColor, Color.GRAY);
             isCursorEnable = typedArray.getBoolean(R.styleable.PasswordView_isCursorEnable, true);
-            cipherTextSize = typedArray.getDimensionPixelSize(R.styleable.PasswordView_cipherTextSize, sp2px(passwordSize / 2));
+            cipherTextSize = typedArray.getDimensionPixelSize(R.styleable.PasswordView_cipherTextSize, passwordSize / 2);
             //如果为边框样式，则padding 默认置为0
             if (mode == Mode.UNDERLINE) {
                 passwordPadding = typedArray.getDimensionPixelSize(R.styleable.PasswordView_passwordPadding, dp2px(15));
             } else {
                 passwordPadding = typedArray.getDimensionPixelSize(R.styleable.PasswordView_passwordPadding, 0);
             }
+            cipherEnable = typedArray.getBoolean(R.styleable.PasswordView_cipherEnable, true);
             typedArray.recycle();
         }
         cursorWidth = dp2px(2);
@@ -279,9 +281,15 @@ public class PasswordView extends View {
         float y = cHeight / 2f + r.height() / 2f - r.bottom;
         for (int i = 0; i < password.length; i++) {
             if (!TextUtils.isEmpty(password[i])) {
-                canvas.drawText(CIPHER_TEXT,
-                        (getPaddingLeft() + passwordSize / 2) + (passwordSize + passwordPadding) * i,
-                        getPaddingTop() + y, paint);
+                if (cipherEnable) {
+                    canvas.drawText(CIPHER_TEXT,
+                            (getPaddingLeft() + passwordSize / 2) + (passwordSize + passwordPadding) * i,
+                            getPaddingTop() + y, paint);
+                } else {
+                    canvas.drawText(password[i],
+                            (getPaddingLeft() + passwordSize / 2) + (passwordSize + passwordPadding) * i,
+                            getPaddingTop() + y, paint);
+                }
             }
         }
     }
@@ -424,6 +432,11 @@ public class PasswordView extends View {
 
     public void setCursorEnable(boolean cursorEnable) {
         isCursorEnable = cursorEnable;
+        postInvalidate();
+    }
+
+    public void setCipherEnable(boolean cipherEnable) {
+        this.cipherEnable = cipherEnable;
         postInvalidate();
     }
 

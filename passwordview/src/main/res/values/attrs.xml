@@ -9,7 +9,8 @@
         <attr name="cursorFlashTime" format="integer" />
         <attr name="isCursorEnable" format="boolean" />
         <attr name="cipherTextSize" format="dimension" />
-        <attr name="cursorColor" format="color"  />
+        <attr name="cipherEnable" format="boolean" />
+        <attr name="cursorColor" format="color" />
         <attr name="mode" format="enum">
             <enum name="underline" value="0" />
             <enum name="rect" value="1" />
