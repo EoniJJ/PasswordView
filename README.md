@@ -1,6 +1,7 @@
 PasswordView
 ====
 下划线（方框）密码输入框
+
 ##Demo
 <img src="https://raw.githubusercontent.com/EoniJJ/PasswordView/master/Demo_underline.png" width = "360" height = "640" />
 <img src="https://raw.githubusercontent.com/EoniJJ/PasswordView/master/Demo_rect.png" width = "360" height = "640" />
@@ -20,7 +21,6 @@ PasswordView
 + passwordLength (密码长度)
 + mode (样式切换 underline->下划线  rect->边框)
 + passwordPadding (每个密码框间隔)
-+ passwordSize (单个密码框大小)
 + borderColor （边框颜色）
 + borderWidth（边框大小）
 + cursorFlashTime（光标闪烁间隔时间）
