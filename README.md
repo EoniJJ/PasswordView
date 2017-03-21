@@ -30,7 +30,6 @@ PasswordView
 + cipherTextSize（‘*’号大小）
 + cursorColor（光标颜色）
 + cipherEnable(是否启用‘*’显示)
-License
--------
-    
+
+## License 
 > The MIT license.
