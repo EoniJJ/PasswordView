@@ -17,6 +17,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        app:cipherEnable="false"
-        app:passwordSize="40dp"/>
+        app:cipherEnable="true" />
+
+    <Button
+        android:id="@+id/btn_change_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHANGE_MODE"/>
 </RelativeLayout>
