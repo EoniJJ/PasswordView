@@ -2,9 +2,11 @@ PasswordView
 ====
 下划线（方框）密码输入框
 
-##Demo
+## Demo
+
 <img src="https://raw.githubusercontent.com/EoniJJ/PasswordView/master/Demo_underline.png" width = "360" height = "640" />
 <img src="https://raw.githubusercontent.com/EoniJJ/PasswordView/master/Demo_rect.png" width = "360" height = "640" />
+
 ## How to use ? 
  ` in layout.xml `
  ```xml
@@ -31,4 +33,4 @@ PasswordView
 License
 -------
     
-       The MIT license.
+> The MIT license.
